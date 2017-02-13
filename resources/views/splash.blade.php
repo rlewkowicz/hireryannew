@@ -49,7 +49,7 @@
           <div id="menu2">
             <div class="resume-container">
               <div class="resume">
-                <iframe src="http://docs.google.com/gview?url=https://drive.google.com/uc?id=0Bws0QSYGC_1ldnpxOERidGY1S0U&embedded=true" frameborder="0"></iframe>
+                <iframe src="http://docs.google.com/gview?url=https://drive.google.com/uc?id=0B96PbEXfu6sAMWRIRTVpQzJUS2s&embedded=true" frameborder="0"></iframe>
               </div>
             </div>
           </div>
