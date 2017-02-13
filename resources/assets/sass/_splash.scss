@@ -305,6 +305,10 @@ body {
     }
 }
 @media screen and (max-width: 900px) {
+    #menu4 > iframe {
+        display: none;
+    }
+
     .container {
         position: relative;
         padding-top: 10px;
