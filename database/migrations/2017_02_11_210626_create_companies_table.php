@@ -16,15 +16,16 @@ class CreateCompaniesTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->increments('id');
             $table->string('company', 255);
-            $table->string('role', 255);
-            $table->string('hash', 255);
-            $table->boolean('will_contact');
-            $table->boolean('over_qualified');
-            $table->boolean('under_qualified');
-            $table->boolean('no_bacholers');
-            $table->boolean('resume_issues');
-            $table->boolean('cover_issues');
-            $table->text('additional_information');
+            $table->string('title', 255);
+            $table->string('url', 255);
+            $table->string('hash', 255)->unique();
+            $table->boolean('will_contact')->nullable();
+            $table->boolean('over_qualified')->nullable();
+            $table->boolean('under_qualified')->nullable();
+            $table->boolean('no_bacholers')->nullable();
+            $table->boolean('resume_issues')->nullable();
+            $table->boolean('cover_issues')->nullable();
+            $table->text('additional_information')->nullable();
             $table->timestamps();
         });
     }

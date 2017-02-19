@@ -1,4 +1,5 @@
 <?php
+use App\Company;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,16 @@ Route::get('/', function () {
     return view('splash');
 });
 
-Route::get('/create', function () {
-    return view('create');
-});
+Route::get('/create',  'CompanyController@show');
+
+Route::post('/create', 'CompanyController@create');
+
 
 Route::get('/company', function () {
-    return view('create');
+    return view('company');
+});
+
+
+Route::get('/api', function() {
+  return App\Company::paginate(10);
 });
