@@ -14,7 +14,7 @@ class CompanyController extends Controller
         function base62_encode($data)
         {
             $outstring = '';
-            $len = 5;
+            $len = strlen($data);
             for ($i = 0; $i < $len; $i += 8) {
                 $chunk = substr($data, $i, 8);
                 $outlen = ceil((strlen($chunk) * 8) / 6);
@@ -32,12 +32,22 @@ class CompanyController extends Controller
 
         $hash = base62_encode(implode($data));
 
-        // $company = new Company;
-        //
-        // $company->company = request()->company;
-        // $company->title = request()->title;
-        // $company->url = request()->url;
-        // $company->hash = base62_encode(implode($data));
+
+        $chars = str_split($hash);
+
+        $i = 0;
+        while (count($chars) > 10) {
+            $i += 3;
+            $n = count($chars);
+            if ($i >= $n)
+                $i %= $n;
+
+            unset($chars[$i]);
+            $chars = array_values($chars);
+        }
+
+        $chars=implode($chars);
+
 
         $company = request()->company;
         $title = request()->title;
@@ -45,7 +55,7 @@ class CompanyController extends Controller
 
 
         $companyrecord = Company::updateOrCreate(
-            ['hash' => $hash],
+            ['hash' => $chars],
             ['company' => $company,
             'title' => $title ,
             'url' => $url]
@@ -53,7 +63,7 @@ class CompanyController extends Controller
 
         $results = Company::paginate(10);
 
-        $data["hash"] = $hash;
+        $data["hash"] = $chars;
 
         return view('create', compact('data', 'results'));
     }
