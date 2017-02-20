@@ -16,48 +16,10 @@ require('bootstrap-sass');
  * and simple, leaving you to focus on building your next great project.
  */
 //
+//
 window.Vue = require('vue');
 
-$(document).ready(function() {
-    Vue.component('story', {
-        template: '#template-story',
-        props: ['story'],
-        data: {
-            stories: [],
-            pagination: {}
-        },
-    })
-    var current = new Vue({
-        el: '.current-applications-wrapper',
-        data: {
-            stories: [],
-            pagination: {}
-        },
-        ready: function() {
-            this.fetchStories()
-        },
-        methods: {
-            fetchStories: function(page_url) {
-                let vm = this;
-                page_url = page_url || '/api'
-                this.$http.get(page_url)
-                    .then(function(response) {
-                        vm.makePagination(response.data)
-                        vm.$set('stories', response.data.data)
-                    });
-            },
-            makePagination: function(data) {
-                let pagination = {
-                    current_page: data.current_page,
-                    last_page: data.last_page,
-                    next_page_url: data.next_page_url,
-                    prev_page_url: data.prev_page_url
-                }
-                this.$set('pagination', pagination)
-            }
-        }
-    });
-});
+
 
 //
 // /**

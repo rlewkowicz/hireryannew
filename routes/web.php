@@ -29,3 +29,7 @@ Route::get('/company', function () {
 Route::get('/api', function() {
   return App\Company::paginate(10);
 });
+
+Route::get('info/{id}', function (App\Company $id) {
+    return $id->company;
+});

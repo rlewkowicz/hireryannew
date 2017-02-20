@@ -25,6 +25,7 @@ class CreateCompaniesTable extends Migration
             $table->boolean('no_bacholers')->nullable();
             $table->boolean('resume_issues')->nullable();
             $table->boolean('cover_issues')->nullable();
+            $table->boolean('viewed')->nullable();
             $table->text('additional_information')->nullable();
             $table->timestamps();
         });

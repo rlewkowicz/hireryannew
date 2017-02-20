@@ -5,11 +5,20 @@
 }
 
 .current-applications-wrapper{
+  text-align: left;
 }
 
-.company-entry-wrapper{
 
+.current-applications > h1 {
+  margin-top: 0px;
+  padding-bottom: 19px;
 }
+
+.current-applications{
+  padding-right: 90px;
+  padding-left: 90px;
+}
+
 
 .company-entry{
   vertical-align: middle;

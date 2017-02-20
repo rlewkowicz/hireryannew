@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.2.0/vue-resource.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,28 +25,28 @@
         </div>
       </div>
       <div class="current-applications-wrapper col-md-6">
-        <h1>Current Applications</h1>
+        <div class="current-applications">
+          <h1>Current Applications</h1>
+          <div class="pagination">
+              <button class="btn btn-default" @click="fetchStories(pagination.prev_page_url)"
+                      :disabled="!pagination.prev_page_url">
+                  Previous
+              </button>
+              <span>Page @{{pagination.current_page}} of @{{pagination.last_page}}</span>
+              <button class="btn btn-default" @click="fetchStories(pagination.next_page_url)"
+                      :disabled="!pagination.next_page_url">Next
+              </button>
+          </div>
           <table class="table table-striped">
-              <tr>
-                  <th>#</th>
-                  <th>Company</th>
-                  <th>Title</th>
-              </tr>
-              <tr v-for="story in stories" is="story" :story="story"></tr>
+            <tr>
+              <th>#</th>
+              <th>Company</th>
+              <th>Title</th>
+              <th>Status</th>
+            </tr>
+            <tr v-for="company in companies" is="company" :company="company"></tr>
           </table>
-          <template id="template-story">
-              <tr>
-                  <td>
-                      @{{story}}
-                  </td>
-                  <td class="col-md-6">
-                      {{-- @{{story.plot}} --}}
-                  </td>
-                  <td>
-                      {{-- @{{story.writer}} --}}
-                  </td>
-              </tr>
-          </template>
+        </div>
       </div>
       <div class="company-entry-wrapper col-md-6">
         <div class="company-entry">
