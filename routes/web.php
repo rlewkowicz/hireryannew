@@ -16,20 +16,22 @@ Route::get('/', function () {
     return view('splash');
 });
 
-Route::get('/create',  'CompanyController@show');
+Route::get('/create',  'CompanyController@show')->middleware('auth');
 
-Route::post('/create', 'CompanyController@create');
+Route::post('/create', 'CompanyController@create')->middleware('auth');
 
-
-Route::get('/company', function () {
-    return view('company');
-});
-
+// Route::get('/company', function () {
+//     return view('company');
+// });
 
 Route::get('/api', function() {
   return App\Company::paginate(10);
-});
+})->middleware('auth');
 
 Route::get('info/{id}', function (App\Company $id) {
     return $id->company;
-});
+})->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

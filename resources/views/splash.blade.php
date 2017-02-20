@@ -49,7 +49,7 @@
           <div id="menu2">
             <div class="resume-container">
               <div class="resume">
-                <iframe src="http://docs.google.com/gview?url=https://drive.google.com/uc?id=0B96PbEXfu6sAMWRIRTVpQzJUS2s&embedded=true" frameborder="0"></iframe>
+                <iframe src="https://docs.google.com/gview?url=https://drive.google.com/uc?id=0B96PbEXfu6sAMWRIRTVpQzJUS2s&embedded=true" frameborder="0"></iframe>
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@
             <h3><a href="http://162.243.247.85/">The Old Site</a></h3>
             <p>
 The old site gets its own tab because I really like it. The objective of the old site was to make it so people could have an interview with me, without me. You’d click on various headings, and I’d have a write up as well as a video. Same as the current site, it’s all from scratch in Laravel. I’ve discontinued it because I’m going for a different image. The last one was intentionally playful while the current one is rather dry. I also had gotten some feedback that I came across as erratic. Along side me being fairly eccentric in general, I was unemployed for the first time in 9 years, I was in a weird place. I’m sure the feedback was valid. Under the hood the site utilized BEM and the 7-1 model. Going back and snagging snippets was a breeze. Some of the CSS was kinda gross, but it’s 100% custom. If nothing else, the organization was gorgeous.             </p>
-            <iframe class="old-site" src="http://162.243.247.85"></iframe>
+            {{-- <iframe class="old-site" src="http://162.243.247.85"></iframe> --}}
         </div>
       </div>
 
