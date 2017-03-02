@@ -46,8 +46,7 @@ class CompanyController extends Controller
             $chars = array_values($chars);
         }
 
-        $chars=implode($chars);
-
+        $chars = implode($chars);
 
         $company = request()->company;
         $title = request()->title;
@@ -61,17 +60,14 @@ class CompanyController extends Controller
             'url' => $url]
         );
 
-        $results = Company::paginate(10);
-
         $data["hash"] = $chars;
 
-        return view('create', compact('data', 'results'));
+        return view('create', compact('data'));
     }
 
 
     public function show()
     {
-        $results = Company::paginate(10);
-        return view('create', compact('results'));
+        return view('create');
     }
 }

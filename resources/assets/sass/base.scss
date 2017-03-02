@@ -1,7 +1,5 @@
 
 
-
-
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 // @import url('https://raw.githubusercontent.com/kenwheeler/slick/master/slick/slick.css');
@@ -13,6 +11,13 @@
 @import "variables";
 @import "splash";
 @import "create";
+@import "company";
+
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+@import "../../../bower_components/font-awesome/scss/font-awesome";
+//
+// @import "../../../bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox";

@@ -11,27 +11,29 @@ use App\Company;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
 
 Route::get('/', function () {
     return view('splash');
 });
 
-Route::get('/create',  'CompanyController@show')->middleware('auth');
-
-Route::post('/create', 'CompanyController@create')->middleware('auth');
-
-// Route::get('/company', function () {
-//     return view('company');
-// });
-
 Route::get('/api', function() {
   return App\Company::paginate(10);
 })->middleware('auth');
 
-Route::get('info/{id}', function (App\Company $id) {
-    return $id->company;
-})->middleware('auth');
 
-Auth::routes();
+Route::get('/create',  'CompanyController@show')->middleware('auth');
 
-Route::get('/home', 'HomeController@index');
+Route::post('/create', 'CompanyController@create')->middleware('auth');
+
+Route::get('/{hash}', function (App\Company $hash) {
+    return view('company', $hash->toArray());
+});
+//
+
+
+// Route::get('info/{id}', function (App\Company $id) {
+//     return $id->company;
+// })->middleware('auth');
