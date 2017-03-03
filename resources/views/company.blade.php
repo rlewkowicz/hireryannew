@@ -7,8 +7,7 @@
     <title></title>
 
     <link rel="stylesheet" type="text/css" href="css/app.css">
-    <script src="js/app.js"></script>
-    {{-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pretty-checkbox/2.1.0/pretty.min.css"> --}}
+ru    {{-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pretty-checkbox/2.1.0/pretty.min.css"> --}}
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
