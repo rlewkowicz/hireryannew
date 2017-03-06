@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-
+    <script src="js/checkbox.js"></script>
     <link rel="stylesheet" type="text/css" href="css/app.css">
-ru    {{-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pretty-checkbox/2.1.0/pretty.min.css"> --}}
+ {{-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pretty-checkbox/2.1.0/pretty.min.css"> --}}
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,42 +31,42 @@ ru    {{-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare
             <div class="check-wrapper">
               <div class="checkbox form-group">
                 <label style="font-size: 1em">
-                  <input class="willcontact" type="checkbox" value="">
+                  <input class="class1" type="checkbox" value="" >
                   <span class="cr"><i class="cr-icon fa fa-check"></i></span>
                   Will contact canidate
                 </label>
               </div>
               <div class="checkbox form-group">
                 <label style="font-size: 1em">
-                  <input class="main-check overqualified" type="checkbox" value="">
+                  <input class="class2" type="checkbox" value="">
                   <span class="cr"><i class="cr-icon fa fa-check"></i></span>
                   Canidate is over qualified
                 </label>
               </div>
               <div class="checkbox form-group">
                 <label style="font-size: 1em">
-                  <input class="main-check underqualified" type="checkbox" value="">
+                  <input class="class3" type="checkbox" value="">
                   <span class="cr"><i class="cr-icon fa fa-check"></i></span>
                   Canidate is under qualified
                 </label>
               </div>
               <div class="checkbox form-group">
                 <label style="font-size: 1em">
-                  <input class="main-check" type="checkbox" value="">
+                  <input class="class4" type="checkbox" value="">
                   <span class="cr"><i class="cr-icon fa fa-check"></i></span>
                   Canidate does not have bacholers degree
                 </label>
               </div>
               <div class="checkbox form-group">
                 <label style="font-size: 1em">
-                  <input class="main-check" type="checkbox" value="">
+                  <input class="class4" type="checkbox" value="">
                   <span class="cr"><i class="cr-icon fa fa-check"></i></span>
                   Canidate had issues with resume
                 </label>
               </div>
               <div class="checkbox form-group">
                 <label style="font-size: 1em">
-                  <input class="main-check" type="checkbox" value="">
+                  <input class="class4" type="checkbox" value="">
                   <span class="cr"><i class="cr-icon fa fa-check"></i></span>
                   Canidate had issues with cover letter
                 </label>

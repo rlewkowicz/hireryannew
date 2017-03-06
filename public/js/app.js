@@ -10330,12 +10330,13 @@ module.exports = g;
  * building robust, powerful web applications using Vue and Laravel.
  */
 __webpack_require__(14);
-__webpack_require__(4);
-__webpack_require__(6);
 __webpack_require__(5);
-__webpack_require__(9);
 __webpack_require__(7);
+__webpack_require__(6);
+__webpack_require__(9);
 __webpack_require__(8);
+// require('./checkbox.js');
+
 
 $(document).ready(function () {
     Vue.component('company', {
@@ -10379,13 +10380,14 @@ $(document).ready(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 3 */
+/* 3 */,
+/* 4 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {window._ = __webpack_require__(12);
@@ -10438,7 +10440,7 @@ window.Vue = __webpack_require__(15);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*! jQuery Migrate v1.2.1 | (c) 2005, 2013 jQuery Foundation, Inc. and other contributors | jquery.org/license */
@@ -10556,7 +10558,7 @@ jQuery.migrateMute === void 0 && (jQuery.migrateMute = !0), function (e, t, n) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -14073,7 +14075,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
@@ -14110,32 +14112,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         },
         collapsible: false,
         active: sessionStorage.selectedTab1
-    });
-});
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
-
-    $('input[class^="class"]').click(function () {
-        var $this = $(this);
-        if ($this.is(".willcontact")) {
-            if ($(".willcontact:checked").length > 0) {
-                $(".main-check").prop({ disabled: true, checked: false });
-            } else {
-                $(".main-check").prop("disabled", false);
-            }
-        } else if ($this.is(".class2")) {
-            if ($this.is(":checked")) {
-                $(".class2").not($this).prop({ disabled: true, checked: false });
-                $(".class1").prop("checked", true);
-            } else {
-                $(".class2").prop("disabled", false);
-            }
-        }
     });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -44388,7 +44364,7 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(3);
+module.exports = __webpack_require__(4);
 
 
 /***/ })

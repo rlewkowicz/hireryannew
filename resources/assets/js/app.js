@@ -9,7 +9,7 @@ require('./jquery-ui.min.js');
 require('./jquery-migrate-1.2.1.min.js');
 require('./slick.min.js');
 require('./mycard.js');
-require('./navbar.js');
+// require('./checkbox.js');
 
 
 
